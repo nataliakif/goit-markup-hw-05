@@ -117,6 +117,18 @@ a{
 .contact-link:focus .contact-icon{
     fill: var(--primary-accent-color);
 }
+.nav-link.current{
+    display: flex;
+    position: relative;
+}
+.current::after{
+    position: absolute;
+    bottom: -32px;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-accent-color);
+}
 /* Секция Hero */
 .hero{   
     background-color: #2F303A;
@@ -168,9 +180,28 @@ a{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
    
 }
-
+/* Секция About */
 .about-list .list-item + .list-item{
     margin-left: 30px;
+}
+.about-list .list-item{
+    position: relative;
+}
+.img-caption-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);;
+    position: absolute;
+    bottom:0;
+}
+.img-caption-text{
+    text-transform: uppercase;
+    color: var(--secondary-accent-color);
+    font-weight: 700;
+    line-height: 1.17;
 }
 /* Секция преимущества*/
 .section-title{
@@ -451,4 +482,20 @@ a{
  }
  .list-image::after{
     border: 1px solid #EEEEEE;
+ }
+ .img-overlay{
+     position: relative;
+ }
+ .overlay{
+     padding: 24px 63px;
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top:0;
+     background: rgba(33, 150, 243, 0.9);
+ }
+ .text-overlay{
+     font-size: 18px;
+     line-height: 1.55;
+     color: var(--secondary-accent-color);
  }
