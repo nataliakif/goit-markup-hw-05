@@ -22,10 +22,17 @@ ul{
 a{
     text-decoration: none;
 }
+body{
+    padding-top: 80px;
+}
 /* Шапка сайта */
 .header{
     background-color: var(--secondary-accent-color);
     border-bottom: 1px solid #ECECEC;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 .section{
     padding-top: 94px;
@@ -483,19 +490,26 @@ a{
  .list-image::after{
     border: 1px solid #EEEEEE;
  }
- .img-overlay{
+ .project-img{
      position: relative;
+     overflow: hidden;
  }
- .overlay{
+ .img-overlay{
      padding: 24px 63px;
      width: 100%;
      height: 100%;
      position: absolute;
      top:0;
      background: rgba(33, 150, 243, 0.9);
+     
+     transform: translateY(100%);
+     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  .text-overlay{
      font-size: 18px;
      line-height: 1.55;
      color: var(--secondary-accent-color);
+ }
+ .project-link:hover .img-overlay{
+    transform: translateY(0%);
  }
