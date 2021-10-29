@@ -541,8 +541,12 @@ body{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 1;
+    opacity: 1;
+    visibility: visible;
+    transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden{
+    visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
@@ -551,19 +555,24 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+ 
 
     width: 528px;
     height: 581px;
     border-radius: 4px;
 
     background-color: var(--secondary-accent-color);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 
+                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    
     
 }
 .modal:hover{
+    
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
+        0px 2px 1px rgba(0, 0, 0, 0.2);     
 }
 .close-icon{
     position: absolute;
